@@ -1,4 +1,4 @@
-# 🏋️‍♂️ Sistema de Gestión de Gimnasios 
+# Sistema de Gestión de Gimnasios 
 ![Estado](https://shields.io)
 ![Versión](https://shields.io)
 
