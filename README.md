@@ -1,8 +1,8 @@
-# Sistema de Gestión de Biblioteca 
+# 🏋️‍♂️ Sistema de Gestión de Gimnasios 
 ![Estado](https://shields.io)
 ![Versión](https://shields.io)
 
-BookFlow es una plataforma web interactiva diseñada para la automatización, control de préstamos y organización del inventario físico y digital de bibliotecas institucionales.
+FitTrack es una plataforma de software diseñada para la administración integral de centros fitness, permitiendo el control de membresías, reserva de clases en tiempo real y el seguimiento personalizado de rutinas de entrenamiento.
 
 ## Tabla de Contenidos
 - [Descripción del Proyecto](#descripción-del-proyecto)
@@ -12,44 +12,45 @@ BookFlow es una plataforma web interactiva diseñada para la automatización, co
 - [Contribuidores](#contribuidores)
 
 ## Descripción del Proyecto
-Este proyecto resuelve la problemática de la pérdida de libros y optimiza el tiempo de registro de los bibliotecarios mediante un panel administrativo intuitivo, alertas automatizadas de devolución y búsquedas rápidas mediante indexación.
+Este sistema centraliza el control de ingresos mediante códigos de acceso automatizados y soluciona la saturación de los establecimientos permitiendo a los usuarios reservar sus cupos y visualizar la disponibilidad de máquinas desde una aplicación móvil intuitiva.
 
 ## Instalación
-Para configurar el entorno de desarrollo local, ejecuta los siguientes comandos:
+Para configurar el entorno de desarrollo local de este sistema, ejecuta los siguientes comandos en tu consola:
 
 ```bash
 git clone https://github.com
 cd laboratorio-readme
-npm install
+npm install --production
 ```
 
 ## Uso
-Una vez completada la instalación, inicializa el servidor local con el comando:
+Una vez completada la descarga de librerías, inicializa el servidor de producción con el comando:
 
 ```bash
-npm start
+npm run dev
 ```
 
 ## Estado de Funcionalidades
 
 | Módulo / Función | Estado | Descripción |
 | :--- | :--- | :--- |
-| **Autenticación (Login)** | Listo | Acceso seguro para estudiantes y administradores. |
-| **Búsqueda de Libros** | Listo | Filtros por título, autor y categoría de texto. |
-| **Préstamos Automatizados**| En progreso | Generación de códigos QR para recojo en físico. |
+| **Control de Membresías** | Listo | Bloqueo automático de acceso para cuentas vencidas. |
+| **Reserva de Clases** | Listo | Agendamiento en vivo para disciplinas grupales. |
+| **Seguimiento Antropométrico**| En progreso | Gráficos evolutivos de porcentaje de grasa y peso. |
 
 ## Pendientes
-- [x] Diseñar el esquema de base de datos relacional.
-- [ ] Implementar la pasarela de notificaciones por correo.
+- [x] Estructurar el modelo de datos de usuarios y contratos.
+- [ ] Integrar la pasarela de pagos en línea (Visa/Mastercard).
 
 ## Arquitectura
-A continuación se detalla el flujo de datos del ecosistema de la aplicación:
+A continuación se detalla el flujo de datos del ecosistema de la aplicación fitness:
 
 ```mermaid
 graph TD
-    A[Cliente] --> B[Frontend - React]
-    B --> C[Backend - Node.js]
-    C --> D[(Base de Datos)]
+    A[App Móvil - Usuario] --> B[API Gateway - Node.js]
+    B --> C[Microservicio de Clientes]
+    B --> D[Microservicio de Pagos]
+    C --> E[(Base de Datos - MongoDB)]
 ```
 
 ## 👥 Contribuidores
