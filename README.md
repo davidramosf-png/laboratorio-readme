@@ -53,5 +53,5 @@ graph TD
     C --> E[(Base de Datos - MongoDB)]
 ```
 
-## 👥 Contribuidores
+## Contribuidores
 * **David Antonio Ramos Flores** - *Desarrollador Principal* - [davidramosf-png](https://github.com)
